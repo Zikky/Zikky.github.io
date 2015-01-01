@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: 'Rosario', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #003262;
+  background: #e9eaec;
+}
+header {
+  margin: 0 auto;
+  font-size: 12px;
+  color: white;
+  border-top: 7px #003262 solid;
+}
+#connect {
+  text-align: right;
+  padding: 10px 20%;
+}
+#topBanner {
+  height: 250px;
+  background-image: url("../images/banner.png");
+  background-position: 0% 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  width:100%;
+  margin-bottom: 10px;
+}
+#bestview {
+  padding-left: 10px;
+  display: none;
+}
+h1 {
+  font-family: 'Stalemate', cursive;
+  font-weight: 400;
+  font-size: 5em;
+  margin: 0px;
+}
+p {
+  margin: 0;
+  line-height: 19px;
+}
+.col {
+  margin: 10px;
+  margin-bottom: 25px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #cccccc;
+}
+.col:first-of-type {
+  margin-left: 0px;
+}
+.col:last-of-type {
+  margin-right: 0px;
+}
+.col {
+  -webkit-animation: colShiftUp 1s linear, fadeIn 1s linear;
+  animation: colShiftUp 1s linear, fadeIn 1s linear;
+}
+.col:hover{
+  background: #003262;
+  color: #FDB515;
+}
+
+/*SECTION: Projects*/
+.projContainer {
+  position: relative;
+  margin: 20px auto;
+}
+.projContainer .flexWrap {
+  align-items: center;
+}
+.projIcon {
+  position: relative;
+  opacity: 1;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #cccccc;
+  background:white;
+  transition: opacity 0.25s;
+}
+.logoWrapper {
+  position: relative;
+}
+.logoWrapper img{
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.active {
+  margin: 0px;
+}
+.imgOverlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #e9eaec;
+  opacity: 0.7;
+  z-index: 1;
+  padding: 2px;
+  transition: opacity 0.25s;
+}
+.projTransition {
+  transition: top 1s, left 1s, transform 1s;
+}
+.projIcon.beginOpen {
+  top:50%;
+  left:50%;
+  right:50%;
+  bottom:50%;
+}
+.openTransition {
+  transition: top 1s, left 1s, bottom 1s, right 1s;
+}
+.endTran {
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.projIcon.open {
+  position: absolute;
+  border:1px solid #003262;
+  top:0%;
+  left:0%;
+  right:0%;
+  bottom:0%;
+  transform: translateY(0%) translateX(0%);
+  cursor:auto;
+}
+.projIcon.beginClose {
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+}
+
+/*Keyframes*/
+@-webkit-keyframes colShiftUp {
+  from {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  to {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+}
+@keyframes colAppear {
+  from {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  to {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Flex */
+.flexWrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.flexItem1 {
+  display: block;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* Box Shadows */
+.boxShadow {
+  -webkit-box-shadow: 0px 8px 10px -2px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 8px 10px -2px rgba(0,0,0,0.3);
+  box-shadow: 0px 8px 10px -2px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.btn {
+  background: black;
+  padding: 10px;
+  margin-right: 10px;
+}
+.closeBtn {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-border-radius: none;
+  border-radius: none;
+  border: none;
+  background: none;
+  position: absolute;
+  font-size: 15px;
+  right: 10px;
+  top: 10px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+/* Global Styling Classes*/
+.invisible {
+  visibility: hidden;
+}
+.hidden {
+  display: none;
+}
+.valignMid {
+  vertical-align: middle
+}
+.center {
+  padding: 0 20%;
+  margin: 0 auto;
+}
+.fadeout {
+  opacity: 0;
+}

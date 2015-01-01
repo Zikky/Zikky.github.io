@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Richard Wu</title>
+    <script asynch src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link asynch rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Stalemate'>
+    <link asynch rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Rosario'>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+    <script src="assets/javascript/main.js"></script>
   </head>
   <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with Github Pages.</p>
-    <p>This site would best be viewed on the most recent versions of Chrome, Safari, and Firefox.</p>
+    <header class="boxShadow">
+      <p id="bestview">This site would best be viewed on the most recent versions of Chrome, Safari, and Firefox.</p>
+      <div id="connect">
+        <a onclick="$('span').toggleClass('hidden');" class="btn">
+          Toggle Hidden
+        </a>
+        <a href="https://www.linkedin.com/in/rwu91" target="blank" title="LinkedIn Profile">
+          <img src="assets/images/linkedin.png" class="valignMid"/>
+        </a>
+      </div>
+    </header>    
+    <div id="topBanner"></div>
+    <section class="center aboutme flexWrap">
+      <section class="col flexItem1 boxShadow">
+        <h1>Who<span class="hidden"> I am</span></h1>
+        <p>Graduated from University of California, Berkeley with a Bachelors of Science in Electrical Engineering and Computer Science (EECS). I have since been working in web development<br>(UX/Front-End Dev).</p>
+      </section>
+      <section class="col flexItem1 boxShadow">
+        <h1>What<span class="hidden"> I do</span></h1>
+        <p>Web Developer (UX/Front-End Dev) for websites. I have created and maintained streamlined sites for major browsers and mobile devices. Experienced in working independently and with a team of developers using Agile and Waterfall development methods.</p>
+      </section>
+      <section class="col flexItem1 boxShadow">
+        <h1>Where<span class="hidden"> I am</span></h1>
+        <p>Currently based in San Francisco, California.</p>
+      </section>
+    </section>
+    <section class="center projects">
+      <p class="hidden">The following are some mobile websites I have developed in the past.<br>Due to the constantly changing nature of websites and trends, the current view of the listed mobile sites may have been redesigned.</p>
+      <div class="projContainer">
+         <div class="flexWrap">
+          <div class="projIcon flexItem1">
+            <button class="closeBtn hidden">X Close</button>
+            <div class="logoWrapper">
+              <div class="imgOverlay"></div>
+                <img src="assets/images/logos/mw_logo.png"/>
+            </div>
+          </div>
+          <div class="projIcon flexItem1">
+            <button class="closeBtn hidden">X Close</button>
+            <div class="logoWrapper">
+              <div class="imgOverlay"></div>
+                <img src="assets/images/logos/bp_logo.png"/>
+            </div>
+          </div>
+          <div class="projIcon flexItem1">
+            <button class="closeBtn hidden">X Close</button>
+            <div class="logoWrapper">
+              <div class="imgOverlay"></div>
+                <img src="assets/images/logos/al_logo.png"/>
+            </div>
+            <div class="projBlurb hidden">Testing Blurb</div>
+          </div>
+        </div>
+        <div class="flexWrap">
+          <div class="projIcon flexItem1">
+            <button class="closeBtn hidden">X Close</button>
+            <div class="logoWrapper">
+              <div class="imgOverlay"></div>
+                <img src="assets/images/logos/hft_logo.png"/>
+            </div>
+          </div>
+          <div class="projIcon flexItem1">
+            <button class="closeBtn hidden">X Close</button>
+            <div class="logoWrapper">
+              <div class="imgOverlay"></div>
+                <img src="assets/images/logos/ms_logo.png"/>
+            </div>
+          </div>
+          <div class="projIcon flexItem1">
+            <button class="closeBtn hidden">X Close</button>
+            <div class="logoWrapper">
+              <div class="imgOverlay"></div>
+                <img src="assets/images/logos/rfl_logo.png"/>
+            </div>
+          </div>
+        </div>
+    </section>
   </body>
 </html>
