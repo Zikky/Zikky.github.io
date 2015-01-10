@@ -4,13 +4,13 @@
   but if were to use complete js to move the object, that also is borderline crazy
   - will add a "non fancy" button for just show/hide functionality instead of all
   these transitions
-  - to be fair, it's a lot better than a lot of other websites for what it's doing
+  - to be fair, it's a lot better than most websites for what it's doing
 */
 $(function(){
   $(".logoWrapper").click(function(){
     var $icon = $(this).closest(".projIcon");
     $icon.addClass("active");
-    $icon.find(".imgOverlay").addClass("fadeout");
+    $icon.find(".imgOverlay").addClass("hidden");
     $(".projContainer").attr("style","height:"+$(".projContainer").height()+"px;");
     $(".projIcon:not(.active)").addClass("fadeout");
     
@@ -57,10 +57,14 @@ function openProject(){
 
     setTimeout(function(){
       $icon.addClass("open").removeClass("endTran");  
+      $icon.addClass("boxShadow");
       $icon.removeClass("beginOpen");
       
       setTimeout(function(){
-        $icon.find(".closeBtn").removeClass("hidden");  
+        $icon.find(".closeBtn").removeClass("hidden");
+        $icon.find(".projContent").removeClass("hidden");  
+        $icon.find(".imgWrapper").attr("style", "height:"+$icon.height()+"px; width: auto;");
+        $icon.find(".projImage").addClass("adjImgHeight");
       }, 1000)
       
     }, 100)
@@ -71,6 +75,7 @@ function openProject(){
 // Close Project function
 function closeProject(obj){
   obj.find(".closeBtn").addClass("hidden");
+  obj.find(".projContent").addClass("hidden");  
   obj.addClass("beginClose");
   
   setTimeout(function(){
@@ -81,6 +86,7 @@ function closeProject(obj){
 
     setTimeout(function(){
       $(".projIcon").removeClass("fadeout");
+      $(".projContainer").attr("style","");
     }, 100)
     
   },1000)
